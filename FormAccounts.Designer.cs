@@ -32,9 +32,6 @@
             System.Windows.Forms.Label lblFirstName;
             System.Windows.Forms.Label lblLastName;
             System.Windows.Forms.Label lblAddress;
-            System.Windows.Forms.Label label2;
-            System.Windows.Forms.Label label3;
-            System.Windows.Forms.Label label5;
             this.lblusername = new System.Windows.Forms.Label();
             this.lbluPhone = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -46,32 +43,24 @@
             this.txtuPhone = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.usersTableAdapter = new Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.usersTableAdapter();
-            this.tableAdapterManager = new Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.TableAdapterManager();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnGunaRegister = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.tsuserID = new System.Windows.Forms.ToolStripLabel();
+            this.lblTitle = new System.Windows.Forms.ToolStripLabel();
+            this.btnLookup = new System.Windows.Forms.ToolStripButton();
+            this.comboBox = new System.Windows.Forms.ToolStripComboBox();
+            this.usersTableAdapter = new Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.usersTableAdapter();
+            this.tableAdapterManager = new Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.TableAdapterManager();
             lblFirstName = new System.Windows.Forms.Label();
             lblLastName = new System.Windows.Forms.Label();
             lblAddress = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            label5 = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
-            this.guna2GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -101,33 +90,6 @@
             lblAddress.TabIndex = 13;
             lblAddress.Text = "Address:";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(14, 198);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(83, 20);
-            label2.TabIndex = 7;
-            label2.Text = "First Name:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(14, 231);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(82, 20);
-            label3.TabIndex = 9;
-            label3.Text = "Last Name:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(14, 297);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(65, 20);
-            label5.TabIndex = 13;
-            label5.Text = "Address:";
-            // 
             // lblusername
             // 
             this.lblusername.AutoSize = true;
@@ -150,7 +112,9 @@
             // 
             this.guna2GroupBox1.AutoRoundedCorners = true;
             this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.BorderRadius = 110;
+            this.guna2GroupBox1.BorderThickness = 3;
             this.guna2GroupBox1.Controls.Add(this.lblusername);
             this.guna2GroupBox1.Controls.Add(this.txtusername);
             this.guna2GroupBox1.Controls.Add(lblFirstName);
@@ -162,13 +126,15 @@
             this.guna2GroupBox1.Controls.Add(lblAddress);
             this.guna2GroupBox1.Controls.Add(this.txtAddress);
             this.guna2GroupBox1.Controls.Add(this.guna2PictureBox1);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Empty;
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(5)))), ((int)(((byte)(126)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(353, 44);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(630, 220);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(222, 399);
             this.guna2GroupBox1.TabIndex = 1;
+            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // txtusername
             // 
@@ -244,28 +210,20 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
-            // 
             // guna2GroupBox2
             // 
             this.guna2GroupBox2.AutoRoundedCorners = true;
             this.guna2GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox2.BorderRadius = 110;
             this.guna2GroupBox2.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.guna2GroupBox2.BorderThickness = 2;
+            this.guna2GroupBox2.BorderThickness = 3;
             this.guna2GroupBox2.Controls.Add(this.btnGunaRegister);
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.Empty;
             this.guna2GroupBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(49, 44);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(326, 220);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.Size = new System.Drawing.Size(222, 399);
             this.guna2GroupBox2.TabIndex = 15;
@@ -289,119 +247,78 @@
             this.btnGunaRegister.TabIndex = 0;
             this.btnGunaRegister.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2GroupBox3
+            // toolStrip
             // 
-            this.guna2GroupBox3.AutoRoundedCorners = true;
-            this.guna2GroupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GroupBox3.BorderRadius = 110;
-            this.guna2GroupBox3.Controls.Add(this.label1);
-            this.guna2GroupBox3.Controls.Add(this.textBox1);
-            this.guna2GroupBox3.Controls.Add(label2);
-            this.guna2GroupBox3.Controls.Add(this.textBox2);
-            this.guna2GroupBox3.Controls.Add(label3);
-            this.guna2GroupBox3.Controls.Add(this.textBox3);
-            this.guna2GroupBox3.Controls.Add(this.label4);
-            this.guna2GroupBox3.Controls.Add(this.textBox4);
-            this.guna2GroupBox3.Controls.Add(label5);
-            this.guna2GroupBox3.Controls.Add(this.textBox5);
-            this.guna2GroupBox3.Controls.Add(this.guna2PictureBox2);
-            this.guna2GroupBox3.FillColor = System.Drawing.Color.Firebrick;
-            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox3.Location = new System.Drawing.Point(651, 44);
-            this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(222, 399);
-            this.guna2GroupBox3.TabIndex = 16;
+            this.toolStrip.AutoSize = false;
+            this.toolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.toolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStrip.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsuserID,
+            this.lblTitle,
+            this.btnLookup,
+            this.comboBox});
+            this.toolStrip.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Size = new System.Drawing.Size(1207, 171);
+            this.toolStrip.TabIndex = 16;
+            this.toolStrip.Text = "toolStrip1";
             // 
-            // label1
+            // tsuserID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 165);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Username:";
+            this.tsuserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsuserID.ForeColor = System.Drawing.Color.White;
+            this.tsuserID.Name = "tsuserID";
+            this.tsuserID.Size = new System.Drawing.Size(0, 168);
             // 
-            // textBox1
+            // lblTitle
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "username", true));
-            this.textBox1.Location = new System.Drawing.Point(103, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(369, 168);
+            this.lblTitle.Text = "Accounts";
             // 
-            // textBox2
+            // btnLookup
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "FirstName", true));
-            this.textBox2.Location = new System.Drawing.Point(103, 195);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLookup.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLookup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLookup.ForeColor = System.Drawing.Color.White;
+            this.btnLookup.Image = global::Chills_Restaurant.Properties.Resources.search;
+            this.btnLookup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLookup.Name = "btnLookup";
+            this.btnLookup.Size = new System.Drawing.Size(29, 168);
+            this.btnLookup.Text = "Look Up";
+            this.btnLookup.Click += new System.EventHandler(this.btnLookup_Click);
             // 
-            // textBox3
+            // comboBox
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "LastName", true));
-            this.textBox3.Location = new System.Drawing.Point(103, 228);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 27);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.comboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(121, 171);
+            this.comboBox.Click += new System.EventHandler(this.comboBox_Click);
             // 
-            // label4
+            // usersTableAdapter
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Phone:";
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox4
+            // tableAdapterManager
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "uPhone", true));
-            this.textBox4.Location = new System.Drawing.Point(103, 261);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 27);
-            this.textBox4.TabIndex = 12;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Address", true));
-            this.textBox5.Location = new System.Drawing.Point(103, 294);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 14;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.AutoRoundedCorners = true;
-            this.guna2PictureBox2.BackgroundImage = global::Chills_Restaurant.Properties.Resources.user__1_;
-            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox2.BorderRadius = 64;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(48, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(131, 145);
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // FormAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(1207, 659);
-            this.Controls.Add(this.guna2GroupBox3);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.ClientSize = new System.Drawing.Size(1207, 732);
+            this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -414,9 +331,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
-            this.guna2GroupBox3.ResumeLayout(false);
-            this.guna2GroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -438,14 +354,10 @@
         private System.Windows.Forms.Label lbluPhone;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2Button btnGunaRegister;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripLabel tsuserID;
+        private System.Windows.Forms.ToolStripButton btnLookup;
+        private System.Windows.Forms.ToolStripLabel lblTitle;
+        private System.Windows.Forms.ToolStripComboBox comboBox;
     }
 }
