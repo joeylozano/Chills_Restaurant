@@ -42,25 +42,26 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtuPhone = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnGunaRegister = new Guna.UI2.WinForms.Guna2Button();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.tsuserID = new System.Windows.Forms.ToolStripLabel();
             this.lblTitle = new System.Windows.Forms.ToolStripLabel();
-            this.btnLookup = new System.Windows.Forms.ToolStripButton();
             this.comboBox = new System.Windows.Forms.ToolStripComboBox();
             this.usersTableAdapter = new Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.usersTableAdapter();
             this.tableAdapterManager = new Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.TableAdapterManager();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnLookup = new System.Windows.Forms.ToolStripButton();
+            this.btnGunaRegister = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             lblFirstName = new System.Windows.Forms.Label();
             lblLastName = new System.Windows.Forms.Label();
             lblAddress = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
             this.toolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -130,7 +131,7 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(5)))), ((int)(((byte)(126)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(630, 220);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(631, 241);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(222, 399);
             this.guna2GroupBox1.TabIndex = 1;
@@ -196,20 +197,6 @@
             this.txtAddress.TabIndex = 14;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BackgroundImage = global::Chills_Restaurant.Properties.Resources.user__1_;
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox1.BorderRadius = 64;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(48, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(131, 145);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2GroupBox2
             // 
             this.guna2GroupBox2.AutoRoundedCorners = true;
@@ -223,29 +210,10 @@
             this.guna2GroupBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(326, 220);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(327, 241);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.Size = new System.Drawing.Size(222, 399);
             this.guna2GroupBox2.TabIndex = 15;
-            // 
-            // btnGunaRegister
-            // 
-            this.btnGunaRegister.AutoRoundedCorners = true;
-            this.btnGunaRegister.BackgroundImage = global::Chills_Restaurant.Properties.Resources.add;
-            this.btnGunaRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnGunaRegister.BorderRadius = 110;
-            this.btnGunaRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGunaRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGunaRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGunaRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGunaRegister.FillColor = System.Drawing.Color.Transparent;
-            this.btnGunaRegister.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnGunaRegister.ForeColor = System.Drawing.Color.White;
-            this.btnGunaRegister.Location = new System.Drawing.Point(0, 0);
-            this.btnGunaRegister.Name = "btnGunaRegister";
-            this.btnGunaRegister.Size = new System.Drawing.Size(222, 399);
-            this.btnGunaRegister.TabIndex = 0;
-            this.btnGunaRegister.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // toolStrip
             // 
@@ -281,18 +249,6 @@
             this.lblTitle.Size = new System.Drawing.Size(369, 168);
             this.lblTitle.Text = "Accounts";
             // 
-            // btnLookup
-            // 
-            this.btnLookup.BackColor = System.Drawing.Color.IndianRed;
-            this.btnLookup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnLookup.ForeColor = System.Drawing.Color.White;
-            this.btnLookup.Image = global::Chills_Restaurant.Properties.Resources.search;
-            this.btnLookup.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLookup.Name = "btnLookup";
-            this.btnLookup.Size = new System.Drawing.Size(29, 168);
-            this.btnLookup.Text = "Look Up";
-            this.btnLookup.Click += new System.EventHandler(this.btnLookup_Click);
-            // 
             // comboBox
             // 
             this.comboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
@@ -312,27 +268,89 @@
             this.tableAdapterManager.UpdateOrder = Chills_Restaurant.Chills_RestaurantDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.Firebrick;
+            this.btnPrevious.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnPrevious.Location = new System.Drawing.Point(0, 171);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(1207, 43);
+            this.btnPrevious.TabIndex = 1;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnLookup
+            // 
+            this.btnLookup.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLookup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLookup.ForeColor = System.Drawing.Color.White;
+            this.btnLookup.Image = global::Chills_Restaurant.Properties.Resources.search;
+            this.btnLookup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLookup.Name = "btnLookup";
+            this.btnLookup.Size = new System.Drawing.Size(29, 168);
+            this.btnLookup.Text = "Look Up";
+            this.btnLookup.Click += new System.EventHandler(this.btnLookup_Click);
+            // 
+            // btnGunaRegister
+            // 
+            this.btnGunaRegister.AutoRoundedCorners = true;
+            this.btnGunaRegister.BackgroundImage = global::Chills_Restaurant.Properties.Resources.add;
+            this.btnGunaRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGunaRegister.BorderRadius = 110;
+            this.btnGunaRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGunaRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGunaRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGunaRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGunaRegister.FillColor = System.Drawing.Color.Transparent;
+            this.btnGunaRegister.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGunaRegister.ForeColor = System.Drawing.Color.White;
+            this.btnGunaRegister.Location = new System.Drawing.Point(0, 0);
+            this.btnGunaRegister.Name = "btnGunaRegister";
+            this.btnGunaRegister.Size = new System.Drawing.Size(222, 399);
+            this.btnGunaRegister.TabIndex = 0;
+            this.btnGunaRegister.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.AutoRoundedCorners = true;
+            this.guna2PictureBox1.BackgroundImage = global::Chills_Restaurant.Properties.Resources.user__1_;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox1.BorderRadius = 64;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(48, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(131, 145);
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // FormAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(1207, 732);
+            this.ClientSize = new System.Drawing.Size(1207, 659);
+            this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAccounts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAccounts";
             this.Load += new System.EventHandler(this.FormAccounts_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,5 +377,6 @@
         private System.Windows.Forms.ToolStripButton btnLookup;
         private System.Windows.Forms.ToolStripLabel lblTitle;
         private System.Windows.Forms.ToolStripComboBox comboBox;
+        private System.Windows.Forms.Button btnPrevious;
     }
 }

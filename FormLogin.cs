@@ -29,9 +29,12 @@ namespace Chills_Restaurant
 
         private void btnGunaLogin_Click(object sender, EventArgs e)
         {
-            if (MainClass.IsValidUser(txtGunaUsername.Text, txtGunaPassword.Text) == false)
+            ComboBoxPos.Items[0] = "1";
+            ComboBoxPos.Items[1] = "2";
+            ComboBoxPos.Items[2] = "3";
+            if (MainClass.IsValidUser(txtGunaUsername.Text, txtGunaPassword.Text, ComboBoxPos.Text) == false)
             {
-                guna2MessageDialog1.Show("Invalid Username or Password");
+                guna2MessageDialog1.Show("Invalid Username, Password or Position");
                 if (count++ >= 2)
                 {
                     guna2MessageDialog1.Show("Failed all 3 login attempts.");
@@ -39,13 +42,20 @@ namespace Chills_Restaurant
                 }
                 return;
             }
+            else if (ComboBoxPos.Text == "2" || ComboBoxPos.Text == "3")
+            {
+                this.Hide();
+                FormPIN formMain = new FormPIN();
+                formMain.Show();
+            }
             else
             {
                 this.Hide();
-                FormAccounts formRegister = new FormAccounts();
-                formRegister.Show();
+                FormMain formMain = new FormMain();
+                formMain.Show();
             }
 
         }
+
     }
 }

@@ -22,7 +22,7 @@ namespace Chills_Restaurant
         }
 
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnPrevious_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormAccounts formLogin = new FormAccounts();
@@ -50,6 +50,7 @@ namespace Chills_Restaurant
             cmd.Parameters.AddWithValue("@Address", txtAddress.Text.Trim());
             cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim());
             cmd.Parameters.AddWithValue("@upass", txtPassword.Text.Trim());
+            cmd.Parameters.AddWithValue("@PIN", txtPIN.Text.Trim());
             cmd.ExecuteNonQuery();
             MessageBox.Show("Registration Successfull");
             Clear();
