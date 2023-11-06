@@ -1,0 +1,17 @@
+C:\Users\reshi\source\repos\menuitems2\menuitems2\bin\Debug\net6.0-windows\menuitems2.exe
+C:\Users\reshi\source\repos\menuitems2\menuitems2\bin\Debug\net6.0-windows\menuitems2.deps.json
+C:\Users\reshi\source\repos\menuitems2\menuitems2\bin\Debug\net6.0-windows\menuitems2.runtimeconfig.json
+C:\Users\reshi\source\repos\menuitems2\menuitems2\bin\Debug\net6.0-windows\menuitems2.dll
+C:\Users\reshi\source\repos\menuitems2\menuitems2\bin\Debug\net6.0-windows\menuitems2.pdb
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.Form1.resources
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.Properties.Resources.resources
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.csproj.GenerateResource.cache
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.AssemblyInfoInputs.cache
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.AssemblyInfo.cs
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.csproj.CoreCompileInputs.cache
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.dll
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\refint\menuitems2.dll
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.pdb
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\menuitems2.genruntimeconfig.cache
+C:\Users\reshi\source\repos\menuitems2\menuitems2\obj\Debug\net6.0-windows\ref\menuitems2.dll
