@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ManagerPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblPleaseEnterInfoManager = new System.Windows.Forms.Label();
             this.txtGunaPIN = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPIN = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.txtGunaUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.ManagerPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ManagerPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,19 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(355, 244);
             this.guna2Panel1.TabIndex = 5;
+            // 
+            // ManagerPictureBox
+            // 
+            this.ManagerPictureBox.FillColor = System.Drawing.Color.Transparent;
+            this.ManagerPictureBox.Image = global::Chills_Restaurant.Properties.Resources.user__1_;
+            this.ManagerPictureBox.ImageRotate = 0F;
+            this.ManagerPictureBox.Location = new System.Drawing.Point(104, 40);
+            this.ManagerPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ManagerPictureBox.Name = "ManagerPictureBox";
+            this.ManagerPictureBox.Size = new System.Drawing.Size(139, 128);
+            this.ManagerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ManagerPictureBox.TabIndex = 8;
+            this.ManagerPictureBox.TabStop = false;
             // 
             // lblPleaseEnterInfoManager
             // 
@@ -179,19 +192,6 @@
             this.lblUsername.Size = new System.Drawing.Size(87, 23);
             this.lblUsername.TabIndex = 13;
             this.lblUsername.Text = "Username";
-            // 
-            // ManagerPictureBox
-            // 
-            this.ManagerPictureBox.FillColor = System.Drawing.Color.Transparent;
-            this.ManagerPictureBox.Image = global::Chills_Restaurant.Properties.Resources.user__1_;
-            this.ManagerPictureBox.ImageRotate = 0F;
-            this.ManagerPictureBox.Location = new System.Drawing.Point(104, 40);
-            this.ManagerPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ManagerPictureBox.Name = "ManagerPictureBox";
-            this.ManagerPictureBox.Size = new System.Drawing.Size(139, 128);
-            this.ManagerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ManagerPictureBox.TabIndex = 8;
-            this.ManagerPictureBox.TabStop = false;
             // 
             // FormPIN
             // 
