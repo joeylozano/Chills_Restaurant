@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "dgSpecHash": "VVw4TVbHn+BDtxs568FVgUaMrzLB5Qg5wQaReuRVCD/rSGW1Y6h4hp2fZGu0ZRs5dNjsHy8wGGI4YE9uqiBU1A==",
@@ -5,4 +6,13 @@
   "projectFilePath": "C:\\Users\\reshi\\source\\repos\\menuitems\\menuitems\\menuitems.vbproj",
   "expectedPackageFiles": [],
   "logs": []
+=======
+{
+  "version": 2,
+  "dgSpecHash": "VVw4TVbHn+BDtxs568FVgUaMrzLB5Qg5wQaReuRVCD/rSGW1Y6h4hp2fZGu0ZRs5dNjsHy8wGGI4YE9uqiBU1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\reshi\\source\\repos\\menuitems\\menuitems\\menuitems.vbproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> c1aa15f737c7c489b14443128d8f395a31e2b021
 }
