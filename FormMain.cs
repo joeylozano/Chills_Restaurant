@@ -16,5 +16,10 @@ namespace Chills_Restaurant
         {
             InitializeComponent();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
