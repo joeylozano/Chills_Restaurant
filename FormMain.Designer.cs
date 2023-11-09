@@ -75,6 +75,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.SubOrder = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.MainOrder = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -88,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -186,6 +192,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "#1";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label3
             // 
@@ -217,6 +224,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "#2";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label5
             // 
@@ -248,6 +256,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "#3";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -259,6 +268,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "#4";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -270,6 +280,7 @@
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "#5";
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -281,6 +292,7 @@
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "#6";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // label7
             // 
@@ -512,6 +524,7 @@
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "#5";
             this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
             // 
             // radioButton8
             // 
@@ -523,6 +536,7 @@
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "#4";
             this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
             // 
             // radioButton9
             // 
@@ -534,6 +548,7 @@
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "#3";
             this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.CheckedChanged += new System.EventHandler(this.radioButton9_CheckedChanged);
             // 
             // radioButton10
             // 
@@ -545,6 +560,7 @@
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "#2";
             this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton10_CheckedChanged);
             // 
             // radioButton11
             // 
@@ -556,6 +572,7 @@
             this.radioButton11.TabStop = true;
             this.radioButton11.Text = "#1";
             this.radioButton11.UseVisualStyleBackColor = true;
+            this.radioButton11.CheckedChanged += new System.EventHandler(this.radioButton11_CheckedChanged);
             // 
             // label18
             // 
@@ -610,6 +627,11 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.MainOrder);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.label26);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.SubOrder);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(889, 13);
             this.groupBox3.Name = "groupBox3";
@@ -617,6 +639,55 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Order";
+            // 
+            // SubOrder
+            // 
+            this.SubOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SubOrder.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubOrder.Location = new System.Drawing.Point(11, 225);
+            this.SubOrder.Name = "SubOrder";
+            this.SubOrder.Size = new System.Drawing.Size(75, 25);
+            this.SubOrder.TabIndex = 12;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(6, 189);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(86, 25);
+            this.label24.TabIndex = 13;
+            this.label24.Text = "Sub Item";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(6, 73);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(97, 25);
+            this.label26.TabIndex = 15;
+            this.label26.Text = "Main Item";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(69, 287);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 40);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Place Order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MainOrder
+            // 
+            this.MainOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MainOrder.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainOrder.Location = new System.Drawing.Point(11, 107);
+            this.MainOrder.Name = "MainOrder";
+            this.MainOrder.Size = new System.Drawing.Size(75, 25);
+            this.MainOrder.TabIndex = 17;
             // 
             // FormMain
             // 
@@ -647,6 +718,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -700,5 +773,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label SubOrder;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label MainOrder;
     }
 }
