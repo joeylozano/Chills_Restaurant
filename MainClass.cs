@@ -14,7 +14,7 @@ namespace Chills_Restaurant
 {
     class MainClass
     {
-        public static readonly string connectionString = "Data Source=chills-server.database.windows.net;Initial Catalog=Chills_Restaurant;User ID=chilladmin;Password=Foxtrot@92;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public static readonly string connectionString = "Server=tcp:chills-server.database.windows.net,1433;Initial Catalog=Chills_Restaurant;Persist Security Info=False;User ID=chilladmin;Password=Foxtrot@92;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         public static SqlConnection conn = new SqlConnection(connectionString);
 
 
