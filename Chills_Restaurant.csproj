@@ -293,6 +293,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\download %285%29.jpg" />
+    <None Include="Resources\download %284%29.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\download %283%29.jpg" />
+    <None Include="Resources\download %282%29.jpg" />
+    <None Include="Resources\download %281%29.jpg" />
+    <None Include="Resources\Carne-Asada-Tacos_B.jpg" />
+    <None Include="Resources\Marriott-3-683x1024.jpg" />
+    <None Include="Resources\download.jpg" />
+    <None Include="Resources\Texas-Style-Chili-Recipe-5-1200-1200x800.jpg" />
+    <None Include="Resources\yellow-star-burger-yellow.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
