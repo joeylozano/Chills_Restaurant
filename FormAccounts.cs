@@ -20,7 +20,7 @@ namespace Chills_Restaurant
         }
 
 
-        public static readonly string connectionString = "Data Source=LAPTOP-U9V72D48\\SQLEXPRESS01;Initial Catalog=Chills_Restaurant;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public static readonly string connectionString = "Data Source=chills-server.database.windows.net;Initial Catalog=Chills_Restaurant;User ID=chilladmin;Password=Foxtrot@92;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public static SqlConnection conn = new SqlConnection(connectionString);
 
         public void fillcomboBox()
