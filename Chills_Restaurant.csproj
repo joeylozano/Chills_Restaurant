@@ -159,6 +159,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Chills_RestaurantDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Chills_RestaurantDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chills_RestaurantDataSet31.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +254,17 @@
     </None>
     <None Include="Chills_RestaurantDataSet2.xss">
       <DependentUpon>Chills_RestaurantDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Chills_RestaurantDataSet31.xsc">
+      <DependentUpon>Chills_RestaurantDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Chills_RestaurantDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Chills_RestaurantDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Chills_RestaurantDataSet31.xss">
+      <DependentUpon>Chills_RestaurantDataSet31.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

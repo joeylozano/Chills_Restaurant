@@ -43,13 +43,16 @@ namespace Chills_Restaurant
         {
             this.Validate();
             this.usersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.chills_RestaurantDataSet);
+            this.tableAdapterManager.UpdateAll(this.chills_RestaurantDataSet3);
+
         }
 
 
         private void FormAccounts_Load(object sender, EventArgs e)
         {
-            this.usersTableAdapter.Fill(this.chills_RestaurantDataSet.users);
+            // TODO: This line of code loads data into the 'chills_RestaurantDataSet3.users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.chills_RestaurantDataSet3.users);
+
         }
 
 
@@ -60,7 +63,7 @@ namespace Chills_Restaurant
 
         private void btnGunaRegister_MouseLeave(object sender, EventArgs e)
         {
-            btnGunaRegister.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
+            btnGunaRegister.BackColor = Color.FromArgb(32, 38, 71); // add the color you want here
         }
 
 
@@ -76,13 +79,13 @@ namespace Chills_Restaurant
         private void btnLookup_Click(object sender, EventArgs e)
         {
             string userString = this.comboBox.Text;
-            this.usersTableAdapter.FillByusername(this.chills_RestaurantDataSet.users, userString);
+            this.usersTableAdapter.FillByusername(this.chills_RestaurantDataSet3.users, userString);
         }
 
 
         private void comboBox_Click(object sender, EventArgs e)
         {
-            
+
         }
 
 

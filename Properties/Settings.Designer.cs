@@ -33,5 +33,17 @@ namespace Chills_Restaurant.Properties {
                 return ((string)(this["Chills_RestaurantConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Driver={ODBC Driver 18 for SQL Server};server=tcp:chills-server.database.windows." +
+            "net,1433;database=Chills_Restaurant;uid=chilladmin;pwd=Foxtrot@92;encrypt=yes;tr" +
+            "ustservercertificate=no;connection timeout=30")]
+        public string Chills_RestaurantConnectionString1 {
+            get {
+                return ((string)(this["Chills_RestaurantConnectionString1"]));
+            }
+        }
     }
 }
