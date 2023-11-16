@@ -83,12 +83,6 @@ namespace Chills_Restaurant
         }
 
 
-        private void comboBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void guna2GroupBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
