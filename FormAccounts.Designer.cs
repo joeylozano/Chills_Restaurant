@@ -29,12 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label usernameLabel;
-            System.Windows.Forms.Label firstNameLabel;
-            System.Windows.Forms.Label lastNameLabel;
-            System.Windows.Forms.Label uPhoneLabel;
-            System.Windows.Forms.Label addressLabel;
+            System.Windows.Forms.Label lblUsername;
+            System.Windows.Forms.Label lblFirstName;
+            System.Windows.Forms.Label lblLastName;
+            System.Windows.Forms.Label lblPhone;
+            System.Windows.Forms.Label lblAddress;
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chills_RestaurantDataSet3 = new Chills_Restaurant.Chills_RestaurantDataSet3();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnGunaRegister = new Guna.UI2.WinForms.Guna2Button();
@@ -44,27 +51,65 @@
             this.btnLookup = new System.Windows.Forms.ToolStripButton();
             this.comboBox = new System.Windows.Forms.ToolStripComboBox();
             this.btnPrevious = new System.Windows.Forms.Button();
-            this.chills_RestaurantDataSet3 = new Chills_Restaurant.Chills_RestaurantDataSet3();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.usersTableAdapter();
             this.tableAdapterManager = new Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.TableAdapterManager();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.lastNameTextBox = new System.Windows.Forms.TextBox();
-            this.uPhoneTextBox = new System.Windows.Forms.TextBox();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            usernameLabel = new System.Windows.Forms.Label();
-            firstNameLabel = new System.Windows.Forms.Label();
-            lastNameLabel = new System.Windows.Forms.Label();
-            uPhoneLabel = new System.Windows.Forms.Label();
-            addressLabel = new System.Windows.Forms.Label();
+            lblUsername = new System.Windows.Forms.Label();
+            lblFirstName = new System.Windows.Forms.Label();
+            lblLastName = new System.Windows.Forms.Label();
+            lblPhone = new System.Windows.Forms.Label();
+            lblAddress = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
             this.toolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Location = new System.Drawing.Point(14, 163);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new System.Drawing.Size(78, 20);
+            lblUsername.TabIndex = 3;
+            lblUsername.Text = "Username:";
+            // 
+            // lblFirstName
+            // 
+            lblFirstName.AutoSize = true;
+            lblFirstName.Location = new System.Drawing.Point(14, 198);
+            lblFirstName.Name = "lblFirstName";
+            lblFirstName.Size = new System.Drawing.Size(83, 20);
+            lblFirstName.TabIndex = 7;
+            lblFirstName.Text = "First Name:";
+            // 
+            // lblLastName
+            // 
+            lblLastName.AutoSize = true;
+            lblLastName.Location = new System.Drawing.Point(15, 235);
+            lblLastName.Name = "lblLastName";
+            lblLastName.Size = new System.Drawing.Size(82, 20);
+            lblLastName.TabIndex = 9;
+            lblLastName.Text = "Last Name:";
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Location = new System.Drawing.Point(15, 264);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new System.Drawing.Size(53, 20);
+            lblPhone.TabIndex = 11;
+            lblPhone.Text = "Phone:";
+            // 
+            // lblAddress
+            // 
+            lblAddress.AutoSize = true;
+            lblAddress.Location = new System.Drawing.Point(15, 297);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new System.Drawing.Size(65, 20);
+            lblAddress.TabIndex = 13;
+            lblAddress.Text = "Address:";
             // 
             // guna2GroupBox1
             // 
@@ -73,16 +118,16 @@
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.BorderRadius = 110;
             this.guna2GroupBox1.BorderThickness = 3;
-            this.guna2GroupBox1.Controls.Add(usernameLabel);
-            this.guna2GroupBox1.Controls.Add(this.usernameTextBox);
-            this.guna2GroupBox1.Controls.Add(firstNameLabel);
-            this.guna2GroupBox1.Controls.Add(this.firstNameTextBox);
-            this.guna2GroupBox1.Controls.Add(lastNameLabel);
-            this.guna2GroupBox1.Controls.Add(this.lastNameTextBox);
-            this.guna2GroupBox1.Controls.Add(uPhoneLabel);
-            this.guna2GroupBox1.Controls.Add(this.uPhoneTextBox);
-            this.guna2GroupBox1.Controls.Add(addressLabel);
-            this.guna2GroupBox1.Controls.Add(this.addressTextBox);
+            this.guna2GroupBox1.Controls.Add(lblUsername);
+            this.guna2GroupBox1.Controls.Add(this.txtUsername);
+            this.guna2GroupBox1.Controls.Add(lblFirstName);
+            this.guna2GroupBox1.Controls.Add(this.txtFirstName);
+            this.guna2GroupBox1.Controls.Add(lblLastName);
+            this.guna2GroupBox1.Controls.Add(this.txtLastName);
+            this.guna2GroupBox1.Controls.Add(lblPhone);
+            this.guna2GroupBox1.Controls.Add(this.txtPhone);
+            this.guna2GroupBox1.Controls.Add(lblAddress);
+            this.guna2GroupBox1.Controls.Add(this.txtAddress);
             this.guna2GroupBox1.Controls.Add(this.guna2PictureBox1);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Empty;
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(5)))), ((int)(((byte)(126)))));
@@ -93,6 +138,61 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(222, 399);
             this.guna2GroupBox1.TabIndex = 1;
             this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "username", true));
+            this.txtUsername.Location = new System.Drawing.Point(107, 160);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
+            this.txtUsername.Size = new System.Drawing.Size(100, 27);
+            this.txtUsername.TabIndex = 4;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.chills_RestaurantDataSet3;
+            // 
+            // chills_RestaurantDataSet3
+            // 
+            this.chills_RestaurantDataSet3.DataSetName = "Chills_RestaurantDataSet3";
+            this.chills_RestaurantDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "FirstName", true));
+            this.txtFirstName.Location = new System.Drawing.Point(107, 195);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
+            this.txtFirstName.Size = new System.Drawing.Size(100, 27);
+            this.txtFirstName.TabIndex = 8;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "LastName", true));
+            this.txtLastName.Location = new System.Drawing.Point(107, 228);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
+            this.txtLastName.Size = new System.Drawing.Size(100, 27);
+            this.txtLastName.TabIndex = 10;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "uPhone", true));
+            this.txtPhone.Location = new System.Drawing.Point(107, 261);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
+            this.txtPhone.Size = new System.Drawing.Size(100, 27);
+            this.txtPhone.TabIndex = 12;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Address", true));
+            this.txtAddress.Location = new System.Drawing.Point(107, 294);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
+            this.txtAddress.Size = new System.Drawing.Size(100, 27);
+            this.txtAddress.TabIndex = 14;
             // 
             // guna2PictureBox1
             // 
@@ -215,16 +315,6 @@
             this.btnPrevious.UseVisualStyleBackColor = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // chills_RestaurantDataSet3
-            // 
-            this.chills_RestaurantDataSet3.DataSetName = "Chills_RestaurantDataSet3";
-            this.chills_RestaurantDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.chills_RestaurantDataSet3;
-            // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
@@ -235,96 +325,6 @@
             this.tableAdapterManager.PositionCompanyTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
-            // 
-            // usernameLabel
-            // 
-            usernameLabel.AutoSize = true;
-            usernameLabel.Location = new System.Drawing.Point(14, 163);
-            usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new System.Drawing.Size(78, 20);
-            usernameLabel.TabIndex = 3;
-            usernameLabel.Text = "Username:";
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "username", true));
-            this.usernameTextBox.Location = new System.Drawing.Point(107, 160);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.ReadOnly = true;
-            this.usernameTextBox.Size = new System.Drawing.Size(100, 27);
-            this.usernameTextBox.TabIndex = 4;
-            // 
-            // firstNameLabel
-            // 
-            firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(14, 198);
-            firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(83, 20);
-            firstNameLabel.TabIndex = 7;
-            firstNameLabel.Text = "First Name:";
-            // 
-            // firstNameTextBox
-            // 
-            this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "FirstName", true));
-            this.firstNameTextBox.Location = new System.Drawing.Point(107, 195);
-            this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.ReadOnly = true;
-            this.firstNameTextBox.Size = new System.Drawing.Size(100, 27);
-            this.firstNameTextBox.TabIndex = 8;
-            // 
-            // lastNameLabel
-            // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(15, 235);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(82, 20);
-            lastNameLabel.TabIndex = 9;
-            lastNameLabel.Text = "Last Name:";
-            // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "LastName", true));
-            this.lastNameTextBox.Location = new System.Drawing.Point(107, 228);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.ReadOnly = true;
-            this.lastNameTextBox.Size = new System.Drawing.Size(100, 27);
-            this.lastNameTextBox.TabIndex = 10;
-            // 
-            // uPhoneLabel
-            // 
-            uPhoneLabel.AutoSize = true;
-            uPhoneLabel.Location = new System.Drawing.Point(15, 264);
-            uPhoneLabel.Name = "uPhoneLabel";
-            uPhoneLabel.Size = new System.Drawing.Size(53, 20);
-            uPhoneLabel.TabIndex = 11;
-            uPhoneLabel.Text = "Phone:";
-            // 
-            // uPhoneTextBox
-            // 
-            this.uPhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "uPhone", true));
-            this.uPhoneTextBox.Location = new System.Drawing.Point(107, 261);
-            this.uPhoneTextBox.Name = "uPhoneTextBox";
-            this.uPhoneTextBox.ReadOnly = true;
-            this.uPhoneTextBox.Size = new System.Drawing.Size(100, 27);
-            this.uPhoneTextBox.TabIndex = 12;
-            // 
-            // addressLabel
-            // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(15, 297);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(65, 20);
-            addressLabel.TabIndex = 13;
-            addressLabel.Text = "Address:";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(107, 294);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.ReadOnly = true;
-            this.addressTextBox.Size = new System.Drawing.Size(100, 27);
-            this.addressTextBox.TabIndex = 14;
             // 
             // FormAccounts
             // 
@@ -343,12 +343,12 @@
             this.Load += new System.EventHandler(this.FormAccounts_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chills_RestaurantDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,10 +369,10 @@
         private System.Windows.Forms.BindingSource usersBindingSource;
         private Chills_RestaurantDataSet3TableAdapters.usersTableAdapter usersTableAdapter;
         private Chills_RestaurantDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.TextBox lastNameTextBox;
-        private System.Windows.Forms.TextBox uPhoneTextBox;
-        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtAddress;
     }
 }
