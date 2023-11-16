@@ -25,8 +25,8 @@ namespace Chills_Restaurant
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormAccounts formLogin = new FormAccounts();
-            formLogin.Show();
+            FormAccounts formAccounts = new FormAccounts();
+            formAccounts.Show();
         }
 
 

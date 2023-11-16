@@ -50,7 +50,6 @@ namespace Chills_Restaurant
 
         private void FormAccounts_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'chills_RestaurantDataSet3.users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.chills_RestaurantDataSet3.users);
 
         }
