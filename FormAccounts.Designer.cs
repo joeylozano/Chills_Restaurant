@@ -298,7 +298,6 @@
             this.comboBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(121, 171);
-            this.comboBox.Click += new System.EventHandler(this.comboBox_Click);
             // 
             // btnPrevious
             // 
@@ -322,7 +321,6 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.PositionCompanyTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
