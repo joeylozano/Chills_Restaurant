@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,28 +14,59 @@ namespace Chills_Restaurant
 {
     public partial class FormAccounts : Form
     {
+        String selectedData;
+
+        public FormAccounts(string selectedData)
+        {
+            InitializeComponent();
+            this.selectedData = selectedData;
+            FillcomboBox();            
+        }
+
         public FormAccounts()
         {
             InitializeComponent();
-            fillcomboBox();
+        }
+
+        public string Sqls()
+        {
+            if (selectedData == "Client")
+            {
+                return "SELECT * FROM users WHERE PositionID NOT IN ('Manager', 'Employee')";
+            }
+            else if (selectedData == "Employee")
+            {
+                return "SELECT * FROM users WHERE PositionID NOT IN ('Manager')";
+            }
+            else if (selectedData == "Manager")
+            {
+                return "SELECT * FROM users";
+            }
+
+            return "";
         }
 
 
-        public static readonly string connectionString = "Server=tcp:chills-server.database.windows.net,1433;Initial Catalog=Chills_Restaurant;Persist Security Info=False;User ID=chilladmin;Password=Foxtrot@92;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
-        public static SqlConnection conn = new SqlConnection(connectionString);
-
-        public void fillcomboBox()
+        public void FillcomboBox()
         {
-            string sql = "select * from users";
+            string connectionString = "Server=tcp:chills-server.database.windows.net,1433;Initial Catalog=Chills_Restaurant;Persist Security Info=False;User ID=chilladmin;Password=Foxtrot@92;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            string sql = Sqls();
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataReader myreader;
 
-            conn.Open();
-            myreader = cmd.ExecuteReader();
-            while (myreader.Read())
+            if (!string.IsNullOrEmpty(sql))
             {
-                string username = myreader.GetString(1);
-                comboBox.Items.Add(username);
+                conn.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string username = myreader.GetString(1);
+                    comboBox.Items.Add(username);
+                }
+                myreader.Close();
+                conn.Close();
             }
         }
 
@@ -44,14 +76,6 @@ namespace Chills_Restaurant
             this.Validate();
             this.usersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.chills_RestaurantDataSet3);
-
-        }
-
-
-        private void FormAccounts_Load(object sender, EventArgs e)
-        {
-            this.usersTableAdapter.Fill(this.chills_RestaurantDataSet3.users);
-
         }
 
 
@@ -60,18 +84,18 @@ namespace Chills_Restaurant
             btnGunaRegister.BackColor = Color.White;
         }
 
+
         private void btnGunaRegister_MouseLeave(object sender, EventArgs e)
         {
-            btnGunaRegister.BackColor = Color.FromArgb(32, 38, 71); // add the color you want here
+            btnGunaRegister.BackColor = Color.FromArgb(32, 38, 71); // add color you want here
         }
 
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormRegister formRegister = new FormRegister();
+            FormRegister formRegister = new FormRegister(selectedData);
             formRegister.Show();
-            conn.Close();
         }
 
 
@@ -88,6 +112,7 @@ namespace Chills_Restaurant
             FormMain formMain = new FormMain();
             formMain.Show();
         }
+
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {

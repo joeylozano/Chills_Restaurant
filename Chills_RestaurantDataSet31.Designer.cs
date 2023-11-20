@@ -24,6 +24,8 @@ namespace Chills_Restaurant {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class Chills_RestaurantDataSet3 : global::System.Data.DataSet {
         
+        private MenuItemsDataTable tableMenuItems;
+        
         private usersDataTable tableusers;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -54,6 +56,9 @@ namespace Chills_Restaurant {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                if ((ds.Tables["MenuItems"] != null)) {
+                    base.Tables.Add(new MenuItemsDataTable(ds.Tables["MenuItems"]));
+                }
                 if ((ds.Tables["users"] != null)) {
                     base.Tables.Add(new usersDataTable(ds.Tables["users"]));
                 }
@@ -73,6 +78,16 @@ namespace Chills_Restaurant {
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MenuItemsDataTable MenuItems {
+            get {
+                return this.tableMenuItems;
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -152,6 +167,9 @@ namespace Chills_Restaurant {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
+                if ((ds.Tables["MenuItems"] != null)) {
+                    base.Tables.Add(new MenuItemsDataTable(ds.Tables["MenuItems"]));
+                }
                 if ((ds.Tables["users"] != null)) {
                     base.Tables.Add(new usersDataTable(ds.Tables["users"]));
                 }
@@ -188,6 +206,12 @@ namespace Chills_Restaurant {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
+            this.tableMenuItems = ((MenuItemsDataTable)(base.Tables["MenuItems"]));
+            if ((initTable == true)) {
+                if ((this.tableMenuItems != null)) {
+                    this.tableMenuItems.InitVars();
+                }
+            }
             this.tableusers = ((usersDataTable)(base.Tables["users"]));
             if ((initTable == true)) {
                 if ((this.tableusers != null)) {
@@ -204,8 +228,16 @@ namespace Chills_Restaurant {
             this.Namespace = "http://tempuri.org/Chills_RestaurantDataSet31.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tableMenuItems = new MenuItemsDataTable();
+            base.Tables.Add(this.tableMenuItems);
             this.tableusers = new usersDataTable();
             base.Tables.Add(this.tableusers);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeMenuItems() {
+            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -270,7 +302,307 @@ namespace Chills_Restaurant {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void MenuItemsRowChangeEventHandler(object sender, MenuItemsRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void usersRowChangeEventHandler(object sender, usersRowChangeEvent e);
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MenuItemsDataTable : global::System.Data.TypedTableBase<MenuItemsRow> {
+            
+            private global::System.Data.DataColumn columnItemName;
+            
+            private global::System.Data.DataColumn columnitemPrice;
+            
+            private global::System.Data.DataColumn columnItemDescription;
+            
+            private global::System.Data.DataColumn columnItemAvailability;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MenuItemsDataTable() {
+                this.TableName = "MenuItems";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal MenuItemsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected MenuItemsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ItemNameColumn {
+                get {
+                    return this.columnItemName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn itemPriceColumn {
+                get {
+                    return this.columnitemPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ItemDescriptionColumn {
+                get {
+                    return this.columnItemDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ItemAvailabilityColumn {
+                get {
+                    return this.columnItemAvailability;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MenuItemsRow this[int index] {
+                get {
+                    return ((MenuItemsRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MenuItemsRowChangeEventHandler MenuItemsRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MenuItemsRowChangeEventHandler MenuItemsRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MenuItemsRowChangeEventHandler MenuItemsRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MenuItemsRowChangeEventHandler MenuItemsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddMenuItemsRow(MenuItemsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MenuItemsRow AddMenuItemsRow(string ItemName, string itemPrice, string ItemDescription, string ItemAvailability) {
+                MenuItemsRow rowMenuItemsRow = ((MenuItemsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ItemName,
+                        itemPrice,
+                        ItemDescription,
+                        ItemAvailability};
+                rowMenuItemsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMenuItemsRow);
+                return rowMenuItemsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MenuItemsDataTable cln = ((MenuItemsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MenuItemsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnItemName = base.Columns["ItemName"];
+                this.columnitemPrice = base.Columns["itemPrice"];
+                this.columnItemDescription = base.Columns["ItemDescription"];
+                this.columnItemAvailability = base.Columns["ItemAvailability"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnItemName = new global::System.Data.DataColumn("ItemName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemName);
+                this.columnitemPrice = new global::System.Data.DataColumn("itemPrice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitemPrice);
+                this.columnItemDescription = new global::System.Data.DataColumn("ItemDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemDescription);
+                this.columnItemAvailability = new global::System.Data.DataColumn("ItemAvailability", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemAvailability);
+                this.columnItemName.AllowDBNull = false;
+                this.columnItemName.MaxLength = 50;
+                this.columnitemPrice.AllowDBNull = false;
+                this.columnitemPrice.MaxLength = 50;
+                this.columnItemDescription.AllowDBNull = false;
+                this.columnItemDescription.MaxLength = 4000;
+                this.columnItemAvailability.AllowDBNull = false;
+                this.columnItemAvailability.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MenuItemsRow NewMenuItemsRow() {
+                return ((MenuItemsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MenuItemsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MenuItemsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MenuItemsRowChanged != null)) {
+                    this.MenuItemsRowChanged(this, new MenuItemsRowChangeEvent(((MenuItemsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MenuItemsRowChanging != null)) {
+                    this.MenuItemsRowChanging(this, new MenuItemsRowChangeEvent(((MenuItemsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MenuItemsRowDeleted != null)) {
+                    this.MenuItemsRowDeleted(this, new MenuItemsRowChangeEvent(((MenuItemsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MenuItemsRowDeleting != null)) {
+                    this.MenuItemsRowDeleting(this, new MenuItemsRowChangeEvent(((MenuItemsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveMenuItemsRow(MenuItemsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Chills_RestaurantDataSet3 ds = new Chills_RestaurantDataSet3();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MenuItemsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -439,7 +771,7 @@ namespace Chills_Restaurant {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow AddusersRow(string username, string upass, string FirstName, string LastName, string uPhone, string Address, int PositionID, int PIN) {
+            public usersRow AddusersRow(string username, string upass, string FirstName, string LastName, string uPhone, string Address, string PositionID, int PIN) {
                 usersRow rowusersRow = ((usersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -508,7 +840,7 @@ namespace Chills_Restaurant {
                 base.Columns.Add(this.columnuPhone);
                 this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAddress);
-                this.columnPositionID = new global::System.Data.DataColumn("PositionID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnPositionID = new global::System.Data.DataColumn("PositionID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPositionID);
                 this.columnPIN = new global::System.Data.DataColumn("PIN", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPIN);
@@ -529,6 +861,7 @@ namespace Chills_Restaurant {
                 this.columnuPhone.MaxLength = 20;
                 this.columnAddress.MaxLength = 250;
                 this.columnPositionID.AllowDBNull = false;
+                this.columnPositionID.MaxLength = 50;
                 this.columnPIN.AllowDBNull = false;
             }
             
@@ -659,6 +992,65 @@ namespace Chills_Restaurant {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class MenuItemsRow : global::System.Data.DataRow {
+            
+            private MenuItemsDataTable tableMenuItems;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal MenuItemsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMenuItems = ((MenuItemsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ItemName {
+                get {
+                    return ((string)(this[this.tableMenuItems.ItemNameColumn]));
+                }
+                set {
+                    this[this.tableMenuItems.ItemNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string itemPrice {
+                get {
+                    return ((string)(this[this.tableMenuItems.itemPriceColumn]));
+                }
+                set {
+                    this[this.tableMenuItems.itemPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ItemDescription {
+                get {
+                    return ((string)(this[this.tableMenuItems.ItemDescriptionColumn]));
+                }
+                set {
+                    this[this.tableMenuItems.ItemDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ItemAvailability {
+                get {
+                    return ((string)(this[this.tableMenuItems.ItemAvailabilityColumn]));
+                }
+                set {
+                    this[this.tableMenuItems.ItemAvailabilityColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class usersRow : global::System.Data.DataRow {
             
             private usersDataTable tableusers;
@@ -769,9 +1161,9 @@ namespace Chills_Restaurant {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int PositionID {
+            public string PositionID {
                 get {
-                    return ((int)(this[this.tableusers.PositionIDColumn]));
+                    return ((string)(this[this.tableusers.PositionIDColumn]));
                 }
                 set {
                     this[this.tableusers.PositionIDColumn] = value;
@@ -842,6 +1234,40 @@ namespace Chills_Restaurant {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class MenuItemsRowChangeEvent : global::System.EventArgs {
+            
+            private MenuItemsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MenuItemsRowChangeEvent(MenuItemsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MenuItemsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class usersRowChangeEvent : global::System.EventArgs {
             
             private usersRow eventRow;
@@ -875,6 +1301,259 @@ namespace Chills_Restaurant {
 }
 namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
     
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MenuItemsTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.Odbc.OdbcDataAdapter _adapter;
+        
+        private global::System.Data.Odbc.OdbcConnection _connection;
+        
+        private global::System.Data.Odbc.OdbcTransaction _transaction;
+        
+        private global::System.Data.Odbc.OdbcCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public MenuItemsTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.Odbc.OdbcDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.Odbc.OdbcConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.Odbc.OdbcCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.Odbc.OdbcTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.Odbc.OdbcCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "MenuItems";
+            tableMapping.ColumnMappings.Add("ItemName", "ItemName");
+            tableMapping.ColumnMappings.Add("itemPrice", "itemPrice");
+            tableMapping.ColumnMappings.Add("ItemDescription", "ItemDescription");
+            tableMapping.ColumnMappings.Add("ItemAvailability", "ItemAvailability");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Chills_Restaurant].[dbo].[MenuItems] ([ItemName], [itemPrice], [Item" +
+                "Description], [ItemAvailability]) VALUES (?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("ItemName", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemName", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("itemPrice", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "itemPrice", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("ItemDescription", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemDescription", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("ItemAvailability", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemAvailability", global::System.Data.DataRowVersion.Current, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.Odbc.OdbcConnection();
+            this._connection.ConnectionString = global::Chills_Restaurant.Properties.Settings.Default.Chills_RestaurantConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ItemName, itemPrice, ItemDescription, ItemAvailability FROM dbo.MenuItems";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Chills_RestaurantDataSet3.MenuItemsDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Chills_RestaurantDataSet3.MenuItemsDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Chills_RestaurantDataSet3.MenuItemsDataTable dataTable = new Chills_RestaurantDataSet3.MenuItemsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Chills_RestaurantDataSet3.MenuItemsDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Chills_RestaurantDataSet3 dataSet) {
+            return this.Adapter.Update(dataSet, "MenuItems");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string ItemName, string itemPrice, string ItemDescription, string ItemAvailability) {
+            if ((ItemName == null)) {
+                throw new global::System.ArgumentNullException("ItemName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ItemName));
+            }
+            if ((itemPrice == null)) {
+                throw new global::System.ArgumentNullException("itemPrice");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(itemPrice));
+            }
+            if ((ItemDescription == null)) {
+                throw new global::System.ArgumentNullException("ItemDescription");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ItemDescription));
+            }
+            if ((ItemAvailability == null)) {
+                throw new global::System.ArgumentNullException("ItemAvailability");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ItemAvailability));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -1022,7 +1701,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_uPhone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uPhone", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Address", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Address", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_PositionID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_PositionID", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_PIN", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PIN", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -1036,7 +1715,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("LastName", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("uPhone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uPhone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Address", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("PositionID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("PositionID", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("PIN", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PIN", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -1048,7 +1727,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("LastName", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("uPhone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uPhone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Address", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("PositionID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("PositionID", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("PIN", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PIN", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_userID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_username", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Original, false, null));
@@ -1061,7 +1740,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_uPhone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "uPhone", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Address", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Address", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_PositionID", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_PositionID", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PositionID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_PIN", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PIN", global::System.Data.DataRowVersion.Original, false, null));
         }
         
@@ -1084,7 +1763,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT userID, username, upass, FirstName, LastName, uPhone, Address, PositionID," +
-                " PIN FROM dbo.users\r\nWHERE username = ?";
+                " PIN FROM dbo.users \r\nWHERE username = ?";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("username", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "username", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -1182,7 +1861,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_userID, string Original_username, string Original_upass, string Original_FirstName, string Original_LastName, string Original_uPhone, string Original_Address, int Original_PositionID, int Original_PIN) {
+        public virtual int Delete(int Original_userID, string Original_username, string Original_upass, string Original_FirstName, string Original_LastName, string Original_uPhone, string Original_Address, string Original_PositionID, int Original_PIN) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_userID));
             if ((Original_username == null)) {
                 throw new global::System.ArgumentNullException("Original_username");
@@ -1228,7 +1907,12 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Address));
             }
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_PositionID));
+            if ((Original_PositionID == null)) {
+                throw new global::System.ArgumentNullException("Original_PositionID");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_PositionID));
+            }
             this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_PIN));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1250,7 +1934,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string username, string upass, string FirstName, string LastName, string uPhone, string Address, int PositionID, int PIN) {
+        public virtual int Insert(string username, string upass, string FirstName, string LastName, string uPhone, string Address, string PositionID, int PIN) {
             if ((username == null)) {
                 throw new global::System.ArgumentNullException("username");
             }
@@ -1287,7 +1971,12 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Address));
             }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(PositionID));
+            if ((PositionID == null)) {
+                throw new global::System.ArgumentNullException("PositionID");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(PositionID));
+            }
             this.Adapter.InsertCommand.Parameters[7].Value = ((int)(PIN));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1316,7 +2005,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
                     string LastName, 
                     string uPhone, 
                     string Address, 
-                    int PositionID, 
+                    string PositionID, 
                     int PIN, 
                     int Original_userID, 
                     string Original_username, 
@@ -1325,7 +2014,7 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
                     string Original_LastName, 
                     string Original_uPhone, 
                     string Original_Address, 
-                    int Original_PositionID, 
+                    string Original_PositionID, 
                     int Original_PIN) {
             if ((username == null)) {
                 throw new global::System.ArgumentNullException("username");
@@ -1363,7 +2052,12 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Address));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(PositionID));
+            if ((PositionID == null)) {
+                throw new global::System.ArgumentNullException("PositionID");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(PositionID));
+            }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(PIN));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_userID));
             if ((Original_username == null)) {
@@ -1410,7 +2104,12 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Address));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_PositionID));
+            if ((Original_PositionID == null)) {
+                throw new global::System.ArgumentNullException("Original_PositionID");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_PositionID));
+            }
             this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_PIN));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1430,6 +2129,120 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.IDbCommand[] _commandCollection;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.IDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.IDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Connection = new global::System.Data.Odbc.OdbcConnection(global::Chills_Restaurant.Properties.Settings.Default.Chills_RestaurantConnectionString1);
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).CommandText = "{? = CALL dbo.AddUser(?, ?, ?, ?, ?, ?, ?, ?)}";
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@RETURN_VALUE", global::System.Data.Odbc.OdbcType.Int, 2147483647, global::System.Data.ParameterDirection.ReturnValue, ((byte)(255)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@username", global::System.Data.Odbc.OdbcType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(255)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@upass", global::System.Data.Odbc.OdbcType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(255)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@FirstName", global::System.Data.Odbc.OdbcType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(255)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@LastName", global::System.Data.Odbc.OdbcType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(255)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@uPhone", global::System.Data.Odbc.OdbcType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(255)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@Address", global::System.Data.Odbc.OdbcType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(255)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@PositionID", global::System.Data.Odbc.OdbcType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(255)), null, global::System.Data.DataRowVersion.Current, false, null));
+            ((global::System.Data.Odbc.OdbcCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.Odbc.OdbcParameter("@PIN", global::System.Data.Odbc.OdbcType.Int, 2147483647, global::System.Data.ParameterDirection.Input, ((byte)(255)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int AddUser(string @username, string @upass, string @FirstName, string @LastName, string @uPhone, string @Address, string @PositionID, global::System.Nullable<int> @PIN) {
+            global::System.Data.Odbc.OdbcCommand command = ((global::System.Data.Odbc.OdbcCommand)(this.CommandCollection[0]));
+            if ((@username == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(@username));
+            }
+            if ((@upass == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(@upass));
+            }
+            if ((@FirstName == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(@FirstName));
+            }
+            if ((@LastName == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(@LastName));
+            }
+            if ((@uPhone == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(@uPhone));
+            }
+            if ((@Address == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(@Address));
+            }
+            if ((@PositionID == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(@PositionID));
+            }
+            if ((@PIN.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(@PIN.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1440,6 +2253,8 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
     public partial class TableAdapterManager : global::System.ComponentModel.Component {
         
         private UpdateOrderOption _updateOrder;
+        
+        private MenuItemsTableAdapter _menuItemsTableAdapter;
         
         private usersTableAdapter _usersTableAdapter;
         
@@ -1455,6 +2270,20 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public MenuItemsTableAdapter MenuItemsTableAdapter {
+            get {
+                return this._menuItemsTableAdapter;
+            }
+            set {
+                this._menuItemsTableAdapter = value;
             }
         }
         
@@ -1491,6 +2320,10 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._menuItemsTableAdapter != null) 
+                            && (this._menuItemsTableAdapter.Connection != null))) {
+                    return this._menuItemsTableAdapter.Connection;
+                }
                 if (((this._usersTableAdapter != null) 
                             && (this._usersTableAdapter.Connection != null))) {
                     return this._usersTableAdapter.Connection;
@@ -1508,6 +2341,9 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._menuItemsTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 if ((this._usersTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -1522,6 +2358,15 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(Chills_RestaurantDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._menuItemsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MenuItems.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._menuItemsTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -1541,6 +2386,14 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(Chills_RestaurantDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._menuItemsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MenuItems.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._menuItemsTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -1564,6 +2417,14 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._usersTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._menuItemsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MenuItems.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._menuItemsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1606,6 +2467,11 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
+            if (((this._menuItemsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._menuItemsTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             if (((this._usersTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._usersTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -1643,6 +2509,15 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._menuItemsTableAdapter != null)) {
+                    revertConnections.Add(this._menuItemsTableAdapter, this._menuItemsTableAdapter.Connection);
+                    this._menuItemsTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
+                    this._menuItemsTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
+                    if (this._menuItemsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._menuItemsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._menuItemsTableAdapter.Adapter);
+                    }
+                }
                 if ((this._usersTableAdapter != null)) {
                     revertConnections.Add(this._usersTableAdapter, this._usersTableAdapter.Connection);
                     this._usersTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
@@ -1709,6 +2584,10 @@ namespace Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._menuItemsTableAdapter != null)) {
+                    this._menuItemsTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._menuItemsTableAdapter]));
+                    this._menuItemsTableAdapter.Transaction = null;
                 }
                 if ((this._usersTableAdapter != null)) {
                     this._usersTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._usersTableAdapter]));

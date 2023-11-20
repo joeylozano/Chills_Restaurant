@@ -39,17 +39,12 @@ namespace Chills_Restaurant
                 }
                 return;
             }
-            else if (ComboBoxPos.Text == "Manager" || ComboBoxPos.Text == "Employee")
-            {
-                this.Hide();
-                FormPIN formMain = new FormPIN();
-                formMain.Show();
-            }
             else
             {
+                string selectedData = ComboBoxPos.SelectedItem.ToString();
                 this.Hide();
-                FormMain formMain = new FormMain();
-                formMain.Show();
+                FormAccounts formAccounts = new FormAccounts(selectedData);
+                formAccounts.Show();
             }
 
         }

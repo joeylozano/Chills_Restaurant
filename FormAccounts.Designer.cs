@@ -321,6 +321,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MenuItemsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
@@ -338,7 +339,6 @@
             this.Name = "FormAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAccounts";
-            this.Load += new System.EventHandler(this.FormAccounts_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
