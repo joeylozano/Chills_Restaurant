@@ -53,6 +53,7 @@
             this.btnPrevious = new System.Windows.Forms.Button();
             this.usersTableAdapter = new Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.usersTableAdapter();
             this.tableAdapterManager = new Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.TableAdapterManager();
+            this.btnSelect = new System.Windows.Forms.Button();
             lblUsername = new System.Windows.Forms.Label();
             lblFirstName = new System.Windows.Forms.Label();
             lblLastName = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new System.Drawing.Point(14, 163);
+            lblUsername.Location = new System.Drawing.Point(14, 158);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new System.Drawing.Size(78, 20);
             lblUsername.TabIndex = 3;
@@ -78,7 +79,7 @@
             // lblFirstName
             // 
             lblFirstName.AutoSize = true;
-            lblFirstName.Location = new System.Drawing.Point(14, 198);
+            lblFirstName.Location = new System.Drawing.Point(14, 193);
             lblFirstName.Name = "lblFirstName";
             lblFirstName.Size = new System.Drawing.Size(83, 20);
             lblFirstName.TabIndex = 7;
@@ -87,7 +88,7 @@
             // lblLastName
             // 
             lblLastName.AutoSize = true;
-            lblLastName.Location = new System.Drawing.Point(15, 235);
+            lblLastName.Location = new System.Drawing.Point(15, 230);
             lblLastName.Name = "lblLastName";
             lblLastName.Size = new System.Drawing.Size(82, 20);
             lblLastName.TabIndex = 9;
@@ -96,7 +97,7 @@
             // lblPhone
             // 
             lblPhone.AutoSize = true;
-            lblPhone.Location = new System.Drawing.Point(15, 264);
+            lblPhone.Location = new System.Drawing.Point(15, 259);
             lblPhone.Name = "lblPhone";
             lblPhone.Size = new System.Drawing.Size(53, 20);
             lblPhone.TabIndex = 11;
@@ -105,7 +106,7 @@
             // lblAddress
             // 
             lblAddress.AutoSize = true;
-            lblAddress.Location = new System.Drawing.Point(15, 297);
+            lblAddress.Location = new System.Drawing.Point(15, 292);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new System.Drawing.Size(65, 20);
             lblAddress.TabIndex = 13;
@@ -118,6 +119,7 @@
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.BorderRadius = 110;
             this.guna2GroupBox1.BorderThickness = 3;
+            this.guna2GroupBox1.Controls.Add(this.btnSelect);
             this.guna2GroupBox1.Controls.Add(lblUsername);
             this.guna2GroupBox1.Controls.Add(this.txtUsername);
             this.guna2GroupBox1.Controls.Add(lblFirstName);
@@ -137,12 +139,11 @@
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(222, 399);
             this.guna2GroupBox1.TabIndex = 1;
-            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // txtUsername
             // 
             this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "username", true));
-            this.txtUsername.Location = new System.Drawing.Point(107, 160);
+            this.txtUsername.Location = new System.Drawing.Point(107, 155);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(100, 27);
@@ -161,7 +162,7 @@
             // txtFirstName
             // 
             this.txtFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "FirstName", true));
-            this.txtFirstName.Location = new System.Drawing.Point(107, 195);
+            this.txtFirstName.Location = new System.Drawing.Point(107, 190);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(100, 27);
@@ -170,7 +171,7 @@
             // txtLastName
             // 
             this.txtLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "LastName", true));
-            this.txtLastName.Location = new System.Drawing.Point(107, 228);
+            this.txtLastName.Location = new System.Drawing.Point(107, 223);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(100, 27);
@@ -179,7 +180,7 @@
             // txtPhone
             // 
             this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "uPhone", true));
-            this.txtPhone.Location = new System.Drawing.Point(107, 261);
+            this.txtPhone.Location = new System.Drawing.Point(107, 256);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(100, 27);
@@ -188,7 +189,7 @@
             // txtAddress
             // 
             this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Address", true));
-            this.txtAddress.Location = new System.Drawing.Point(107, 294);
+            this.txtAddress.Location = new System.Drawing.Point(107, 289);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(100, 27);
@@ -325,6 +326,20 @@
             this.tableAdapterManager.UpdateOrder = Chills_Restaurant.Chills_RestaurantDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSelect.FlatAppearance.BorderSize = 0;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSelect.Location = new System.Drawing.Point(63, 335);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(96, 30);
+            this.btnSelect.TabIndex = 15;
+            this.btnSelect.Text = "Select";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
             // FormAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -372,5 +387,6 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

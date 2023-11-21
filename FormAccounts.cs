@@ -106,19 +106,19 @@ namespace Chills_Restaurant
         }
 
 
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormMain formMain = new FormMain();
-            formMain.Show();
-        }
-
-
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
+        }
+
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPIN formPIN = new FormPIN();
+            formPIN.Show();
         }
     }
 }
