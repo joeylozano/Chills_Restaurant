@@ -100,7 +100,7 @@
             this.txtGunaPIN.PlaceholderText = "";
             this.txtGunaPIN.SelectedText = "";
             this.txtGunaPIN.Size = new System.Drawing.Size(327, 41);
-            this.txtGunaPIN.TabIndex = 10;
+            this.txtGunaPIN.TabIndex = 1;
             this.txtGunaPIN.UseSystemPasswordChar = true;
             // 
             // lblPIN
@@ -181,7 +181,7 @@
             this.txtGunaUsername.PlaceholderText = "";
             this.txtGunaUsername.SelectedText = "";
             this.txtGunaUsername.Size = new System.Drawing.Size(327, 41);
-            this.txtGunaUsername.TabIndex = 14;
+            this.txtGunaUsername.TabIndex = 0;
             // 
             // lblUsername
             // 
