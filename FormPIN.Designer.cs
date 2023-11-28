@@ -149,7 +149,7 @@
             this.btnGunaPrevious.Size = new System.Drawing.Size(122, 45);
             this.btnGunaPrevious.TabIndex = 12;
             this.btnGunaPrevious.Text = "Previous";
-            this.btnGunaPrevious.Click += new System.EventHandler(this.btnGunaExit_Click);
+            this.btnGunaPrevious.Click += new System.EventHandler(this.btnGunaPrevious_Click);
             // 
             // guna2MessageDialog1
             // 
