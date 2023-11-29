@@ -29,9 +29,6 @@ namespace Chills_Restaurant
 
         private void btnGunaLogin_Click(object sender, EventArgs e)
         {
-            ComboBoxPos.Items[0] = "1";
-            ComboBoxPos.Items[1] = "2";
-            ComboBoxPos.Items[2] = "3";
             if (MainClass.IsValidUser(txtGunaUsername.Text, txtGunaPassword.Text, ComboBoxPos.Text) == false)
             {
                 guna2MessageDialog1.Show("Invalid Username, Password or Position");
@@ -42,17 +39,12 @@ namespace Chills_Restaurant
                 }
                 return;
             }
-            else if (ComboBoxPos.Text == "2" || ComboBoxPos.Text == "3")
-            {
-                this.Hide();
-                FormPIN formMain = new FormPIN();
-                formMain.Show();
-            }
             else
             {
+                string selectedData = ComboBoxPos.SelectedItem.ToString();
                 this.Hide();
-                FormMain formMain = new FormMain();
-                formMain.Show();
+                FormAccounts formAccounts = new FormAccounts(selectedData);
+                formAccounts.Show();
             }
 
         }

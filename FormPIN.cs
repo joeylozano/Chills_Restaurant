@@ -19,11 +19,11 @@ namespace Chills_Restaurant
             InitializeComponent();
         }
 
-        private void btnGunaExit_Click(object sender, EventArgs e)
+        private void btnGunaPrevious_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormLogin formLogin = new FormLogin();
-            formLogin.Show();
+            FormAccounts formAccounts = new FormAccounts();
+            formAccounts.Show();
         }
 
         private void btnGunaLogin_Click(object sender, EventArgs e)
@@ -41,8 +41,8 @@ namespace Chills_Restaurant
             else
             {
                 this.Hide();
-                FormAccounts formAccounts = new FormAccounts();
-                formAccounts.Show();
+                FormMain formMain = new FormMain();
+                formMain.Show();
             }
         }
     }
