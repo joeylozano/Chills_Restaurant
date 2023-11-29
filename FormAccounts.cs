@@ -117,7 +117,7 @@ namespace Chills_Restaurant
         private void btnSelect_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormPIN formPIN = new FormPIN();
+            FormPIN formPIN = new FormPIN(selectedData);
             formPIN.Show();
         }
     }

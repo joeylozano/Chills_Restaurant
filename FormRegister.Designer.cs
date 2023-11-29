@@ -283,7 +283,7 @@
             this.lblMandatoryPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblMandatoryPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMandatoryPassword.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblMandatoryPassword.Location = new System.Drawing.Point(743, 453);
+            this.lblMandatoryPassword.Location = new System.Drawing.Point(743, 458);
             this.lblMandatoryPassword.Name = "lblMandatoryPassword";
             this.lblMandatoryPassword.Size = new System.Drawing.Size(20, 28);
             this.lblMandatoryPassword.TabIndex = 19;

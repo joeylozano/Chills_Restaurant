@@ -13,10 +13,12 @@ namespace Chills_Restaurant
 {
     public partial class FormPIN : Form
     {
+        string selectedData;
         int count = 0;  
-        public FormPIN()
+        public FormPIN(string selectedData)
         {
             InitializeComponent();
+            this.selectedData = selectedData;
         }
 
         private void btnGunaPrevious_Click(object sender, EventArgs e)
