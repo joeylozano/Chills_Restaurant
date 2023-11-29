@@ -271,7 +271,7 @@
             this.lblMandatoryUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblMandatoryUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMandatoryUsername.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblMandatoryUsername.Location = new System.Drawing.Point(743, 410);
+            this.lblMandatoryUsername.Location = new System.Drawing.Point(743, 416);
             this.lblMandatoryUsername.Name = "lblMandatoryUsername";
             this.lblMandatoryUsername.Size = new System.Drawing.Size(20, 28);
             this.lblMandatoryUsername.TabIndex = 18;
@@ -283,7 +283,7 @@
             this.lblMandatoryPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblMandatoryPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMandatoryPassword.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblMandatoryPassword.Location = new System.Drawing.Point(743, 458);
+            this.lblMandatoryPassword.Location = new System.Drawing.Point(743, 461);
             this.lblMandatoryPassword.Name = "lblMandatoryPassword";
             this.lblMandatoryPassword.Size = new System.Drawing.Size(20, 28);
             this.lblMandatoryPassword.TabIndex = 19;
