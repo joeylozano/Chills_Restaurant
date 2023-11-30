@@ -80,7 +80,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.SubOrder = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditMenu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -745,14 +745,16 @@
             this.SubOrder.Size = new System.Drawing.Size(100, 31);
             this.SubOrder.TabIndex = 12;
             // 
-            // button2
+            // btnEditMenu
             // 
-            this.button2.Location = new System.Drawing.Point(1331, 595);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditMenu.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditMenu.Location = new System.Drawing.Point(1295, 550);
+            this.btnEditMenu.Name = "btnEditMenu";
+            this.btnEditMenu.Size = new System.Drawing.Size(170, 101);
+            this.btnEditMenu.TabIndex = 3;
+            this.btnEditMenu.Text = "Edit Menu";
+            this.btnEditMenu.UseVisualStyleBackColor = true;
+            this.btnEditMenu.Click += new System.EventHandler(this.btnEditMenu_Click);
             // 
             // FormMain
             // 
@@ -760,7 +762,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(1609, 860);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnEditMenu);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -845,6 +847,6 @@
         private System.Windows.Forms.Label SubOrder;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label MainOrder;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEditMenu;
     }
 }
