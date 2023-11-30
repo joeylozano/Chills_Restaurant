@@ -98,7 +98,8 @@ namespace Chills_Restaurant
 
         private void btnEditMenu_Click(object sender, EventArgs e)
         {
-
+            FormEditMenu formEditMenu = new FormEditMenu();
+            formEditMenu.Show();
         }
     }
 }

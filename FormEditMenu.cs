@@ -26,7 +26,9 @@ namespace Chills_Restaurant
 
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    imageLocation = imageLocation;
+                    imageLocation = dialog.FileName;
+
+                    pictureBox1.ImageLocation = imageLocation;
                 }
             }
             catch (Exception)
