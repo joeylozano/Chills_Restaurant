@@ -95,5 +95,11 @@ namespace Chills_Restaurant
             MessageBox.Show(MainItem, "You Have Ordered");
             MessageBox.Show(SubItem, "And");
         }
+
+        private void btnEditMenu_Click(object sender, EventArgs e)
+        {
+            FormEditMenu formEditMenu = new FormEditMenu();
+            formEditMenu.Show();
+        }
     }
 }
